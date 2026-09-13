@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,72 +8,103 @@
 
 ```
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
     body {
+        margin: 0;
         font-family: Arial, sans-serif;
-        background: #111827;
-        color: white;
-        text-align: center;
-        padding: 60px 20px;
+        background: #0f172a;
+        color: #ffffff;
     }
 
     .container {
-        max-width: 700px;
+        max-width: 900px;
         margin: auto;
-        background: #1f2937;
-        padding: 40px;
-        border-radius: 15px;
+        padding: 50px 20px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 40px 20px;
     }
 
     h1 {
-        margin-bottom: 20px;
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        margin-bottom: 15px;
     }
 
     p {
-        color: #d1d5db;
-        line-height: 1.6;
+        color: #cbd5e1;
+        line-height: 1.7;
     }
 
-    .info {
-        margin-top: 30px;
+    .subtitle {
+        max-width: 700px;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .section {
+        background: #1e293b;
+        border-radius: 16px;
+        padding: 30px;
+        margin-top: 25px;
+    }
+
+    .steps {
+        display: grid;
+        gap: 15px;
+    }
+
+    .step {
+        background: #334155;
+        border-radius: 12px;
         padding: 20px;
-        background: #374151;
-        border-radius: 10px;
     }
-</style>
+
+    .step-number {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .discord-box {
+        background: #111827;
+        border: 1px solid #475569;
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 20px;
+        text-align: left;
+        font-family: monospace;
+        white-space: pre-line;
+    }
+
+    .leaderboard {
+        margin-top: 20px;
+    }
+
+    .player {
+        background: #334155;
+        border-radius: 10px;
+        padding: 18px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .rank {
+        font-weight: bold;
+    }
+
+    .demo {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #94a3b8
 ```
-
-</head>
-
-<body>
-
-```
-<div class="container">
-
-    <h1>🎮 VALORANT Discord Leaderboard</h1>
-
-    <p>
-        Ez az oldal egy Discord bothoz készült,
-        amely egy Discord szerver tagjainak VALORANT fiókjait
-        és ranglistáját kezeli.
-    </p>
-
-    <div class="info">
-        <h2>🏆 Mit tud a bot?</h2>
-
-        <p>
-            • VALORANT fiókok regisztrálása<br>
-            • Rang és RR megjelenítése<br>
-            • Discord szerver ranglista<br>
-            • Több VALORANT fiók kezelése
-        </p>
-    </div>
-
-    <p>
-        A projekt egy Discord szerver közösségi használatára készült.
-    </p>
-
-</div>
-```
-
-</body>
-</html>
