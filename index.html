@@ -1,110 +1,275 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALORANT Discord Leaderboard</title>
 
-```
-<style>
-    * {
-        box-sizing: border-box;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: #ffffff;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
 
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 50px 20px;
-    }
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 40px 20px;
+        }
 
-    .hero {
-        text-align: center;
-        padding: 40px 20px;
-    }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
 
-    h1 {
-        font-size: 42px;
-        margin-bottom: 15px;
-    }
+        h1 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
 
-    h2 {
-        margin-bottom: 15px;
-    }
+        h2 {
+            margin-bottom: 15px;
+        }
 
-    p {
-        color: #cbd5e1;
-        line-height: 1.7;
-    }
+        p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
 
-    .subtitle {
-        max-width: 700px;
-        margin: auto;
-        font-size: 18px;
-    }
+        .subtitle {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+        }
 
-    .section {
-        background: #1e293b;
-        border-radius: 16px;
-        padding: 30px;
-        margin-top: 25px;
-    }
+        .section {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 25px;
+        }
 
-    .steps {
-        display: grid;
-        gap: 15px;
-    }
+        .step {
+            background: #334155;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+        }
 
-    .step {
-        background: #334155;
-        border-radius: 12px;
-        padding: 20px;
-    }
+        .discord-box {
+            background: #111827;
+            border: 1px solid #475569;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: monospace;
+            white-space: pre-line;
+        }
 
-    .step-number {
-        font-size: 22px;
-        font-weight: bold;
-    }
+        .player {
+            background: #334155;
+            border-radius: 10px;
+            padding: 18px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
 
-    .discord-box {
-        background: #111827;
-        border: 1px solid #475569;
-        border-radius: 12px;
-        padding: 20px;
-        margin-top: 20px;
-        text-align: left;
-        font-family: monospace;
-        white-space: pre-line;
-    }
+        .rank {
+            font-weight: bold;
+        }
 
-    .leaderboard {
-        margin-top: 20px;
-    }
+        .demo {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
 
-    .player {
-        background: #334155;
-        border-radius: 10px;
-        padding: 18px;
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 15px;
-    }
+        .badge {
+            display: inline-block;
+            background: #dc2626;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
 
-    .rank {
-        font-weight: bold;
-    }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+        }
+    </style>
+</head>
 
-    .demo {
-        margin-top: 15px;
-        font-size: 13px;
-        color: #94a3b8
-```
+<body>
+
+<div class="container">
+
+    <section class="hero">
+
+        <div class="badge">
+            VALORANT COMMUNITY PROJECT
+        </div>
+
+        <h1>🎮 VALORANT Discord Leaderboard</h1>
+
+        <p class="subtitle">
+            A Discord bot designed for VALORANT community servers.
+            Members can register their VALORANT accounts and view
+            a community leaderboard with competitive rank and ranked rating (RR).
+        </p>
+
+    </section>
+
+    <section class="section">
+
+        <h2>⚙️ How it works</h2>
+
+        <div class="step">
+            <b>1. Register</b>
+            <p>
+                A Discord member uses the <b>/register</b> command
+                to register their VALORANT account.
+            </p>
+        </div>
+
+        <div class="step">
+            <b>2. Connect account</b>
+            <p>
+                The planned production version will use Riot's
+                approved authentication / RSO flow to connect
+                the player's VALORANT account.
+            </p>
+        </div>
+
+        <div class="step">
+            <b>3. Retrieve competitive information</b>
+            <p>
+                After the appropriate authorization and API access,
+                the bot can retrieve supported competitive information
+                such as rank and ranked rating.
+            </p>
+        </div>
+
+        <div class="step">
+            <b>4. Leaderboard</b>
+            <p>
+                The bot displays registered accounts in a Discord
+                leaderboard so community members can compare
+                their current competitive progress.
+            </p>
+        </div>
+
+        <div class="step">
+            <b>5. Multiple accounts</b>
+            <p>
+                A Discord member can register more than one VALORANT account.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>💬 Example Discord Flow</h2>
+
+        <div class="discord-box">
+/register
+
+Riot ID:
+Zozo
+
+Tag:
+1234
+
+[ Continue ]
+
+✅ Account connected
+
+Zozo#1234
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>🏆 Example Leaderboard</h2>
+
+        <div class="player">
+            <b>🥇 Zozo#1234</b>
+            <span class="rank">Ascendant 2 · 142 RR</span>
+        </div>
+
+        <div class="player">
+            <b>🥈 PlayerTwo#5678</b>
+            <span class="rank">Immortal 1 · 87 RR</span>
+        </div>
+
+        <div class="player">
+            <b>🥉 PlayerThree#9999</b>
+            <span class="rank">Diamond 3 · 71 RR</span>
+        </div>
+
+        <p class="demo">
+            Demo data only. These values are examples of how the
+            leaderboard will look after the Riot integration is completed.
+        </p>
+
+    </section>
+
+    <section class="section">
+
+        <h2>🤖 Current Prototype</h2>
+
+        <div class="step">
+            ✅ <b>/register</b> opens a registration form.
+        </div>
+
+        <div class="step">
+            ✅ Registered Riot IDs and tags are stored.
+        </div>
+
+        <div class="step">
+            ✅ <b>/leaderboard</b> displays registered accounts.
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>🔗 Planned Riot Integration</h2>
+
+        <p>
+            The production version is planned to use Riot's approved
+            authentication and API mechanisms where required.
+        </p>
+
+        <p>
+            Player information will be used for connecting accounts
+            and displaying supported competitive information in the
+            Discord community leaderboard.
+        </p>
+
+        <p>
+            The project is not intended to provide an item shop checker
+            or professional esports data.
+        </p>
+
+    </section>
+
+</div>
+
+<footer>
+    VALORANT Discord Leaderboard · Community Project
+</footer>
+
+</body>
+</html>
